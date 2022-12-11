@@ -12,7 +12,7 @@ const App = () => {
 			<ScrollToTop />
 			<Routes>
 				<Route path="/" element={<Meals />}></Route>
-				<Route path="/detail/:id" element={<Detail />}></Route>
+				<Route path="/detail/:name/:id" element={<Detail />}></Route>
 			</Routes>
 		</div>
 	);

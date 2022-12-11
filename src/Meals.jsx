@@ -37,9 +37,17 @@ const Meals = () => {
 			) : (
 				<>
 					<div className="flex items-center  gap-2 flex-wrap ">
+						<select defaultValue={'Beef'} onChange={(e) => setType(e.target.value)} className="block md:hidden border-2 px-2 py-1 rounded">
+							{categories?.map((cat) => (
+								<option key={cat.strCategory} value={cat.strCategory}>
+									{cat.strCategory}
+								</option>
+							))}
+						</select>
+
 						{categories?.map((cat) => (
 							<button
-								className={`py-1 px-5 text-sm rounded-full border border-yellow-500 hover:text-white hover:bg-yellow-500 ${cat.strCategory === type && 'text-white bg-yellow-500'}`}
+								className={`hidden md:block py-1 px-5 text-sm rounded-full border border-yellow-500 hover:text-white hover:bg-yellow-500 ${cat.strCategory === type && 'text-white bg-yellow-500'}`}
 								key={cat.strCategory}
 								onClick={() => setType(cat.strCategory)}>
 								{cat.strCategory}
