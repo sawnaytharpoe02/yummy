@@ -6,7 +6,7 @@ const Navbar = () => {
 		<Link to={'/'}>
 			<div className="flex items-center gap-2 my-4">
 				<RiRestaurant2Fill className="text-3xl text-yellow-400" />
-				<p className="text-xl">Foodie</p>
+				<p className="text-xl">Yummy</p>
 			</div>
 		</Link>
 	);
